@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<jmxConfigurator/>
+
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<charset>utf-8</charset>
+			<Pattern>%date{HH:mm:ss.SSS} %thread %c %m%n</Pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>/opt/app/logs/zuul.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+		
+			<fileNamePattern>zuul.%d{yyyyMMdd}.log</fileNamePattern>
+			<maxHistory>1</maxHistory>
+	
+		</rollingPolicy>
+	
+		<encoder>
+			<pattern>%date{HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg%n</pattern>
+		</encoder>
+	</appender>
+	
+	<root level="INFO">
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="FILE" />
+	</root>
+</configuration>

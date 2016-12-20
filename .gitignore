@@ -1,0 +1,26 @@
+/.idea
+**/target
+# Built maven projects
+*.class
+**/target/**
+
+# Eclipse configuration files
+**/.metadata*
+**/.settings*
+*.classpath
+*.project
+/Servers/
+/RemoteSystemsTempFiles/
+
+# Gradle files
+**/.gradle*
+**/build/**
+**/bin/**
+
+# Temp files (for ubuntu)
+*~
+
+#IntelliJ Idea
+*.iml
+/bin/
+/build/

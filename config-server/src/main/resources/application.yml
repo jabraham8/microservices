@@ -1,0 +1,28 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/jarodriguezparadigma/config.git
+          
+server:
+  port: 8888 
+    
+info:
+  version: 0.0.1-SNAPSHOT
+  Description: Spring Cloud Config Server
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER:http://localhost:8761/eureka/}
+  instance:
+    prefer-ip-address: true
+    
+security:
+  ignored: /health**,/info**,/metrics**,/trace**
+  basic:
+    enabled: true
+  user:
+    name: testeando
+    password: t3st34nd0
