@@ -5,4 +5,6 @@ import java.util.Map;
 public interface TestService {
 
 	Map<String, Object> doSomething();
+	
+	void fail();
 }

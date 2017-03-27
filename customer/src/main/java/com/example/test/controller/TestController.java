@@ -32,4 +32,12 @@ public class TestController {
 	public Map<String, Object> doSomething() {
 		return testService.doSomething();
 	}
+	
+	@ApiOperation(value = "Fail", httpMethod = "GET")
+	@RequestMapping(path = "/fail",  method = GET, produces = APPLICATION_JSON_VALUE)
+	@ResponseBody
+	@ResponseStatus(OK)
+	public void doFail() {
+		testService.fail();
+	}
 }

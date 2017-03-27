@@ -9,3 +9,7 @@ spring:
         username: testeando
         password: t3st34nd0
         uri: ${CONFIG_SERVER:http://localhost:8888/}
+        
+health:
+  config:
+    enabled: false

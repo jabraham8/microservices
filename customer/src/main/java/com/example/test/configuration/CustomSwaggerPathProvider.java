@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import springfox.documentation.spring.web.paths.AbstractPathProvider;
 
 /**
- * This is itended to go to some common library so every MS can use it
+ * This is intended to go to some common library so every MS can use it
  * 
  * @author abraham
  *
